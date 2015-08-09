@@ -1,0 +1,66 @@
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "active_record_models" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_attribute" varchar, "phone_number" varchar, "phone_number_as_normalized" varchar, "fax_number" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "simple_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "required_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "optional_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "formatted_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "not_formatted_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "normalizable_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "big_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "australian_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "polish_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "mismatched_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "active_record_models" ("fax_number") VALUES (?)  [["fax_number", "+19785550000"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecordModel Load (0.1ms)[0m  SELECT  "active_record_models".* FROM "active_record_models" WHERE "active_record_models"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "active_record_models" SET "fax_number" = ? WHERE "active_record_models"."id" = ?  [["fax_number", "+61308612906"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecordModel Load (0.0ms)[0m  SELECT  "active_record_models".* FROM "active_record_models" WHERE "active_record_models"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "active_record_models" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_attribute" varchar, "phone_number" varchar, "phone_number_as_normalized" varchar, "fax_number" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "simple_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "required_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "optional_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "formatted_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "not_formatted_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "normalizable_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "big_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "australian_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "polish_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "mismatched_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "active_record_models" ("fax_number") VALUES (?)  [["fax_number", "+19785550000"]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecordModel Load (0.1ms)[0m  SELECT  "active_record_models".* FROM "active_record_models" WHERE "active_record_models"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "active_record_models" SET "fax_number" = ? WHERE "active_record_models"."id" = ?  [["fax_number", "+61308612906"], ["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecordModel Load (0.1ms)[0m  SELECT  "active_record_models".* FROM "active_record_models" WHERE "active_record_models"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "active_record_models" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_attribute" varchar, "phone_number" varchar, "phone_number_as_normalized" varchar, "fax_number" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "simple_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "required_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "optional_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "formatted_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "not_formatted_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "normalizable_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "big_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "australian_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "polish_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) [0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "mismatched_helpful_homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar) 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "active_record_models" ("fax_number") VALUES (?)  [["fax_number", "+19785550000"]]
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecordModel Load (0.1ms)[0m  SELECT  "active_record_models".* FROM "active_record_models" WHERE "active_record_models"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "active_record_models" SET "fax_number" = ? WHERE "active_record_models"."id" = ?  [["fax_number", "+61308612906"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecordModel Load (0.0ms)[0m  SELECT  "active_record_models".* FROM "active_record_models" WHERE "active_record_models"."id" = ? LIMIT 1  [["id", 1]]

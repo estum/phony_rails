@@ -1,19 +1,11 @@
 require 'coveralls'
 Coveralls.wear!
 
-# Own code here.
+ENV["RAILS_ENV"] ||= "test"
+ENV['DATABASE_URL'] ||= 'sqlite3::memory:'
 
-require 'rubygems'
-require 'bundler/setup'
-
-require 'active_record'
-require 'mongoid'
-require 'phony_rails'
-
-ActiveRecord::Base.establish_connection(
-  :adapter  => "sqlite3",
-  :database => ":memory:"
-)
+require File.expand_path("../dummy/config/environment", __FILE__)
+I18n.config.enforce_available_locales = true
 
 ActiveRecord::Schema.define do
   create_table :active_record_models do |table|
@@ -62,8 +54,6 @@ end
 
 class MongoidDummy < MongoidModel
 end
-
-I18n.config.enforce_available_locales = true
 
 RSpec.configure do |config|
   # some (optional) config here
